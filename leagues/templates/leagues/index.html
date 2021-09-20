@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<h1>ALL Leagues</h1>
+		<ol>
+			{% for league in leagues %}
+				<li>{{league.name}}</li>			
+			{% endfor %}
+		</ol>
+{% comment %}
+{% endcomment %}
+
+		<div class="container">
+			<h4>1.- All Baseball Leagues</h4>
+			<ol>
+				{% for league in Baseball_Leagues %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>2.- All Women Leagues</h4>
+			<ol>
+				{% for league in women_leagues %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>3.- All Hockey Leagues</h4>
+			<ol>
+				{% for league in any_hockey %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>4.- All Not Football Leagues</h4>
+			<ol>
+				{% for league in sport_not_football %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+		
+			<h4>5.- All Conference Leagues</h4>
+			<ol>
+				{% for league in named_conference %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>6.- All Atlantic Leagues</h4>
+			<ol>
+				{% for league in atlantic_leagues %}
+					<li>{{league.name}}</li>
+				{% endfor %}
+			</ol>
+		</div>
+
+
+		<h1>Teams</h1>
+		<ol>
+			{% for team in teams %}
+				<li>{{team.location}} {{team.team_name}}</li>				
+			{% endfor %}
+		</ol>
+
+		<div class="container">
+			<h4>7.- Teams in Dallas</h4>
+			<ol>
+				{% for team in dallas_teams %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+
+			<h4>8.- Teams named Raptors</h4>
+			<ol>
+				{% for team in raptors_teams %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+
+			<h4>9.- Teams with "City" in Location</h4>
+			<ol>
+				{% for team in city_in_location_teams %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+
+			<h4>10.- Teams with "T" at the beginning of Name</h4>
+			<ol>
+				{% for team in t_teams %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+
+			<h4>11.- All Teams, by Location Alphabetically Ordered</h4>
+			<ol>
+				{% for team in teams_loc_alphab_order %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+
+			<h4>12.- All Teams, by Team Name Alphabetically Reverse Ordered</h4>
+			<ol>
+				{% for team in teams_name_rev_ord %}
+					<li>{{team.location}} {{team.team_name}}</li>				
+				{% endfor %}
+			</ol>
+		</div>
+
+
+		<h1>Players</h1>
+		<ol>
+			{% for player in players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+
+		<div class="container">
+			<h4>13.- All Players with "Cooper" Last Name</h4>
+			<ol>
+				{% for player in cooper_last_name %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>14.- All Players with "Joshua" First Name</h4>
+			<ol>
+				{% for player in joshua_first_name %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>15.- All Players with "Cooper" Last Name but not "Joshua" First Name</h4>
+			<ol>
+				{% for player in cooper_not_joshua %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+
+			<h4>16.- All Players with "Alexander" or "Wyatt" First Name</h4>
+			<ol>
+				{% for player in alexander_or_wyatt %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+	</body>
+</html>
