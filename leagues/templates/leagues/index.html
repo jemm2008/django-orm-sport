@@ -11,9 +11,24 @@
 				<li>{{league.name}}</li>			
 			{% endfor %}
 		</ol>
+		<h1>Teams</h1>
+		<ol>
+			{% for team in teams %}
+				<li>{{team.location}} {{team.team_name}}</li>				
+			{% endfor %}
+		</ol>
+		<h1>Players</h1>
+		<ol>
+			{% for player in players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
 {% comment %}
 {% endcomment %}
-
+		<hr>
+		<h1 class="text-center"> SOLUCION PRIMERA ACTIVIDAD</h1>
+		<hr>
+		<br>
 		<div class="container">
 			<h4>1.- All Baseball Leagues</h4>
 			<ol>
@@ -58,13 +73,6 @@
 			</ol>
 		</div>
 
-
-		<h1>Teams</h1>
-		<ol>
-			{% for team in teams %}
-				<li>{{team.location}} {{team.team_name}}</li>				
-			{% endfor %}
-		</ol>
 
 		<div class="container">
 			<h4>7.- Teams in Dallas</h4>
@@ -111,13 +119,6 @@
 		</div>
 
 
-		<h1>Players</h1>
-		<ol>
-			{% for player in players %}
-				<li>{{player.first_name}} {{player.last_name}}</li>
-			{% endfor %}
-		</ol>
-
 		<div class="container">
 			<h4>13.- All Players with "Cooper" Last Name</h4>
 			<ol>
@@ -149,19 +150,105 @@
 
 		</div>
 
+		 <hr>
+		<h1 class="text-center"> SOLUCION SEGUNDA ACTIVIDAD</h1>
+		<hr>
+
+		<div class="container">
+			<h4>1.- All Teams in Atlantic Soccer Conference</h4>
+			<ol>
+				{% for team in teams_atlantic_soccer %}
+					<li>{{team.location}} {{team.team_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>2.- Boston Penguins Actual Players</h4>
+			<ol>
+				{% for player in act_players_bostonpenguins %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>3.- International Collegiate Baseball Conference Actual Players</h4>
+			<ol>
+				{% for player in act_players_intcoll_baseballconf %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>4.- American Conference of Amateur Football Actual Players and "López" Last Name</h4>
+			<ol>
+				{% for player in lopez_player %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>5.- All Football Players</h4>
+			<ol>
+				{% for player in football_players %}
+					<li>{{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>6.- All Teams with a Player named Sophia</h4>
+			<ol>
+				{% for team in sophia_teams %}
+					<li>{{team.location}} {{team.team_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>7.- All Leagues with a Player named Sophia</h4>
+			<ol>
+				{% for league in sophia_leagues %}
+					<li> {{league.name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>8.- All "Flores" Players who doesn't play actually for the Washington Roughriders</h4>
+			<ol>
+				{% for player in flores_not_in_wa_rriders %}
+					<li> {{player.first_name}} {{player.last_name}}</li>
+				{% endfor %}
+			</ol>
+			<h4>9.- All Teams which Samuel Evans had played for</h4>
+			<ol>
+				{% for team in samevans_all_teams %}
+					<li> {{team.location}} {{team.team_name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>10.- All past and actual Players of Manitoba Tiger-Cats</h4>
+			<ol>
+				{% for player in allplayers_manitoba_tigercats %}
+					<li> {{player.first_name}} {{player.last_name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>11.- All past but no actual Players of Wichita Vikings</h4>
+			<ol>
+				{% for player in past_players_wichita_vikings %}
+					<li> {{player.first_name}} {{player.last_name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>12.- All past Teams of Jacob Gray before join Oregon Colts</h4>
+			<ol>
+				{% for team in jgray_teams_before_ocolts %}
+					<li> {{team.location}} {{team.team_name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>13.- All Players named "Joshua" who played in Atlantic Federation of Amateur Baseball Players</h4>
+			<ol>
+				{% for player in alljoshua_fed_atl_baseball %}
+					<li> {{player.first_name}} {{player.last_name}} </li>
+				{% endfor %}
+			</ol>
+			<h4>14.- All Teams with 12 or more Players (past and current)</h4>
+			<ol>
+				{% for team in teams_more12players %}
+					<li> {{team.location}} {{team.team_name}} ( {{ team.num_players }} )</li>
+				{% endfor %}
+			</ol>
+			<h4>15.- All players and the number of teams they played for (ordered by the number of teams they played for)</h4>
+			<ol>
+				{% for player in allplayers_with_teams %}
+					<li> {{player.first_name}} {{player.last_name}} - Numero de Equipos para los que juega/(jugó) - [ {{ player.num_teams }} ]</li>
+				{% endfor %}
+			</ol>
 
 
 
-
-
-
-
-
-
-
-
-
-
+		</div>
 
 
 
